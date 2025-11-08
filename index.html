@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VASUKI K | My Project Portfolio</title>
+    <link rel="icon" type="image/png" href="download.png">
+
+    <style>
+        /* Global & Body Styles - மாற்றங்கள் இல்லை */
+        body {
+            background-image: url('download (3).jpeg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /*
+           *** முக்கிய மாற்றம் இங்கே தான்! ***
+           Main Content Container Styles: இப்போது h1, p, ol-க்கு மட்டுமே வெள்ளை பின்னணி உள்ளது.
+           .social-links மற்றும் .profile-links நீக்கப்பட்டுள்ளன.
+        */
+        h1, p, ol { 
+            background-color: rgba(255, 255, 255, 0.9);
+            display: block;
+            max-width: 650px;
+            width: 95%;
+            margin: 15px auto;
+            padding: 15px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #0056b3;
+            padding: 15px 15px;
+            margin-bottom: 10px;
+        }
+
+        /* --- Top Social Links Container Styles (வெள்ளை பின்னணி நீக்கப்பட்டது) --- */
+        .social-links {
+            /* வெள்ளை பின்னணி நீக்கப்பட்டாலும், அமைப்பை (layout) மையப்படுத்த இந்த விதிகள் தேவை */
+            max-width: 650px;
+            width: 95%;
+            margin: 15px auto 10px auto; /* மார்ஜினை சற்றே சரி செய்துள்ளேன் */
+            padding: 0; /* பேடிங்கை நீக்கினால், பட்டன்கள் மட்டுமே தெரியும் */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: none; /* நிழல் தேவையில்லை */
+            box-sizing: border-box;
+            background-color: transparent; /* பின்னணி வெளிப்படையாக (transparent) இருக்க வேண்டும் */
+        }
+
+        /* Top Social Link Buttons Style - மாற்றங்கள் இல்லை */
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 8px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0;
+            transition: background-color 0.3s;
+        }
+
+        /* Specific colors for social/coding profiles - மாற்றங்கள் இல்லை */
+        .social-links .linkedin { background-color: #0077b5; }
+        .social-links .leetcode { background-color: #ffa116; }
+        .social-links .hackerrank { background-color: #00a442; }
+        .social-links a:hover { filter: brightness(1.15); }
+
+        /* --- GitHub All Repositories Link Style (வெள்ளை பின்னணி நீக்கப்பட்டது) --- */
+        .profile-links {
+            /* வெள்ளை பின்னணி நீக்கப்பட்டாலும், அமைப்பை மையப்படுத்த இந்த விதிகள் தேவை */
+            max-width: 650px;
+            width: 95%;
+            text-align: center;
+            margin: 10px auto 20px auto;
+            padding: 0; /* பேடிங்கை நீக்கியுள்ளேன் */
+            box-sizing: border-box;
+            background-color: transparent; /* பின்னணி வெளிப்படையாக (transparent) இருக்க வேண்டும் */
+            box-shadow: none; /* நிழல் தேவையில்லை */
+        }
+
+        .profile-links a {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            max-width: 300px;
+            margin: 0 auto;
+            transition: background-color 0.3s;
+        }
+
+        .profile-links a:hover { background-color: #555; }
+
+        /* --- Project List Styles & Media Query - மாற்றங்கள் இல்லை --- */
+        li {
+            padding: 10px 0;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-align: left;
+            margin-left: 0;
+            list-style-type: none;
+            border-bottom: 2px solid #ddd;
+        }
+
+        li > a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            transition: background-color 0.3s;
+        }
+
+        li > a:not([href*="github.com"]) { background-color: #007bff; }
+        li > a[href*="github.com"] { background-color: #333; margin-left: 10px; }
+
+        li ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 8px;
+            background-color: transparent;
+        }
+
+        li ul li {
+            font-size: 0.9rem;
+            color: #555;
+            padding: 2px 0;
+            text-align: left;
+            margin-left: 0;
+            border-bottom: none;
+        }
+
+        @media (max-width: 600px) {
+            li > a {
+                display: block;
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+            li > a[href*="github.com"] {
+                margin-top: 8px;
+            }
+
+            .social-links a {
+                flex-grow: 1;
+                min-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 VASUKI K | Project Portfolio</h1>
+
+    <div class="social-links">
+        <a href="உங்கள்_LinkedIn_URL" target="_blank" class="linkedin">LinkedIn</a>
+        <a href="உங்கள்_LeetCode_URL" target="_blank" class="leetcode">LeetCode</a>
+        <a href="உங்கள்_HackerRank_URL" target="_blank" class="hackerrank">HackerRank</a>
+    </div>
+
+    <div class="profile-links">
+        <a href="https://github.com/Vasukik" target="_blank">View All 26+ GitHub Repositories</a>
+    </div>
+
+    <p>
+        Here are the links and brief details of my high-impact works, showcasing my core skills in <strong>Java, SQL, and Front-End Development</strong>.
+    </p>
+
+    <ol>
+        <li>
+            <strong>1. Responsive Registration Form (Primary Frontend Project)</strong>
+            <br>
+            <a href="https://registerationmodel-vasukikk.netlify.app/" target="_blank" title="Live Demo Link">
+                Live Demo
+            </a>
+            <a href="https://github.com/Vasukik/LoginPagefrontend" target="_blank" title="Source Code/Details">
+                GitHub Repository
+            </a>
+            <ul>
+                <li>Developed a fully responsive Registration/Login UI using HTML, CSS, and JavaScript.</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>2. Farm-to-Market: Digital Solution (Paper Presentation)</strong>
+            <br>
+            <a href="https://github.com/Vasukik/Farm-to-Market" target="_blank" title="Source Code/Details">
+                GitHub Repository
+            </a>
+            <ul>
+                <li>Bridged the gap between rural farmers and urban consumers through a proposed digital solution.<br>Research paper presented at the PEACE-2025 International Conference.</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>3. Employee Management System (Core Java Console-Based)</strong>
+            <br>
+            <a href="https://github.com/Vasukik/Employee-Management" target="_blank" title="Source Code/Details">
+                GitHub Repository
+            </a>
+            <ul>
+                <li>Developed a robust system using <strong>Core Java OOPs</strong>, `ArrayList`, and implemented <strong>CRUD</strong> functionality.<br>Used <strong>File Handling</strong> to ensure data persistence and stability.</li>
+            </ul>
+        </li>
+
+    </ol>
+
+</body>
+</html>
