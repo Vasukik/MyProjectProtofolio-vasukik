@@ -20,11 +20,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /*
-           *** முக்கிய மாற்றம் இங்கே தான்! ***
-           Main Content Container Styles: இப்போது h1, p, ol-க்கு மட்டுமே வெள்ளை பின்னணி உள்ளது.
-           .social-links மற்றும் .profile-links நீக்கப்பட்டுள்ளன.
-        */
         h1, p, ol { 
             background-color: rgba(255, 255, 255, 0.9);
             display: block;
@@ -42,24 +37,20 @@
             padding: 15px 15px;
             margin-bottom: 10px;
         }
-
-        /* --- Top Social Links Container Styles (வெள்ளை பின்னணி நீக்கப்பட்டது) --- */
         .social-links {
-            /* வெள்ளை பின்னணி நீக்கப்பட்டாலும், அமைப்பை (layout) மையப்படுத்த இந்த விதிகள் தேவை */
             max-width: 650px;
             width: 95%;
-            margin: 15px auto 10px auto; /* மார்ஜினை சற்றே சரி செய்துள்ளேன் */
-            padding: 0; /* பேடிங்கை நீக்கினால், பட்டன்கள் மட்டுமே தெரியும் */
+            margin: 15px auto 10px auto; 
+            padding: 0; 
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 8px;
-            box-shadow: none; /* நிழல் தேவையில்லை */
+            box-shadow: none; 
             box-sizing: border-box;
-            background-color: transparent; /* பின்னணி வெளிப்படையாக (transparent) இருக்க வேண்டும் */
+            background-color: transparent;
         }
 
-        /* Top Social Link Buttons Style - மாற்றங்கள் இல்லை */
         .social-links a {
             color: white;
             text-decoration: none;
@@ -72,23 +63,21 @@
             transition: background-color 0.3s;
         }
 
-        /* Specific colors for social/coding profiles - மாற்றங்கள் இல்லை */
         .social-links .linkedin { background-color: #0077b5; }
         .social-links .leetcode { background-color: #ffa116; }
         .social-links .hackerrank { background-color: #00a442; }
         .social-links a:hover { filter: brightness(1.15); }
 
-        /* --- GitHub All Repositories Link Style (வெள்ளை பின்னணி நீக்கப்பட்டது) --- */
         .profile-links {
-            /* வெள்ளை பின்னணி நீக்கப்பட்டாலும், அமைப்பை மையப்படுத்த இந்த விதிகள் தேவை */
+           
             max-width: 650px;
             width: 95%;
             text-align: center;
             margin: 10px auto 20px auto;
-            padding: 0; /* பேடிங்கை நீக்கியுள்ளேன் */
+            padding: 0; 
             box-sizing: border-box;
-            background-color: transparent; /* பின்னணி வெளிப்படையாக (transparent) இருக்க வேண்டும் */
-            box-shadow: none; /* நிழல் தேவையில்லை */
+            background-color: transparent; /
+            box-shadow: none; 
         }
 
         .profile-links a {
@@ -106,7 +95,6 @@
 
         .profile-links a:hover { background-color: #555; }
 
-        /* --- Project List Styles & Media Query - மாற்றங்கள் இல்லை --- */
         li {
             padding: 10px 0;
             margin-bottom: 15px;
@@ -174,13 +162,13 @@
     <h1>🚀 VASUKI K | Project Portfolio</h1>
 
     <div class="social-links">
-        <a href="உங்கள்_LinkedIn_URL" target="_blank" class="linkedin">LinkedIn</a>
-        <a href="உங்கள்_LeetCode_URL" target="_blank" class="leetcode">LeetCode</a>
-        <a href="உங்கள்_HackerRank_URL" target="_blank" class="hackerrank">HackerRank</a>
+        <a href="http://www.linkedin.com/in/vasuki-k-174562252" target="_blank" class="linkedin">LinkedIn</a>
+        <a href="https://leetcode.com/u/kvasuki2004/" target="_blank" class="leetcode">LeetCode</a>
+        <a href="https://www.hackerrank.com/aarul8643?hr_r=1" target="_blank" class="hackerrank">HackerRank</a>
     </div>
 
     <div class="profile-links">
-        <a href="https://github.com/Vasukik" target="_blank">View All 26+ GitHub Repositories</a>
+        <a href="https://github.com/Vasukik" target="_blank"> GitHub Repositories</a>
     </div>
 
     <p>
@@ -189,16 +177,16 @@
 
     <ol>
         <li>
-            <strong>1. Responsive Registration Form (Primary Frontend Project)</strong>
+            <strong>1. Sample Login/Registration</strong>
             <br>
             <a href="https://registerationmodel-vasukikk.netlify.app/" target="_blank" title="Live Demo Link">
-                Live Demo
+                 Demo
             </a>
             <a href="https://github.com/Vasukik/LoginPagefrontend" target="_blank" title="Source Code/Details">
                 GitHub Repository
             </a>
             <ul>
-                <li>Developed a fully responsive Registration/Login UI using HTML, CSS, and JavaScript.</li>
+                <li>Developed a Sample Registration/Login UI using HTML, CSS, and JavaScript.</li>
             </ul>
         </li>
 
